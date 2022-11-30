@@ -15,7 +15,6 @@ all: $(HTML)
 	       --from markdown \
 	       --to html \
 	       --css https://unpkg.com/sakura.css/css/sakura.css \
-	       --metadata title="$<" \
 	       $< -o $@
 
 tar: $(MARKDOWN)
