@@ -11,12 +11,12 @@ all: $(HTML)
 	git push
 
 %.html: %.md
-	pandoc --standalone \ 
-	       --from markdown \	       
+	pandoc --standalone \
+	       --from markdown \
 	       --to html \
 	       --css https://unpkg.com/sakura.css/css/sakura.css \
-	       --metadata title="$<" \	       
-	       $< -o $@	
+	       --metadata title="$<" \
+	       $< -o $@
 
 tar: $(MARKDOWN)
 	tar --exclude=notes.tar.gz --exclude=.git/ -czvf notes.tar.gz ./
