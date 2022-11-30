@@ -11,7 +11,7 @@ all: $(HTML)
 	git push
 
 %.html: %.md
-	pandoc --lua-filter fix-links-multiple-files.lua \
+	pandoc --lua-filter links-to-html.lua \
 	       --standalone \
 	       --from markdown \
 	       --to html \
