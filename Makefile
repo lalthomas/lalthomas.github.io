@@ -11,7 +11,8 @@ all: $(HTML)
 	git push
 
 %.html: %.md
-	pandoc --standalone \
+	pandoc --lua-filter fix-links-multiple-files.lua \
+	       --standalone \
 	       --from markdown \
 	       --to html \
 	       --css https://unpkg.com/sakura.css/css/sakura.css \
