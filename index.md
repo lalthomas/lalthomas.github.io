@@ -1,3 +1,7 @@
-### Lal Thomas Wiki
+% Lal Thomas Documents
+% 2024-02-27
+% Lal Thomas
 
-[Test](1.md)
+Lal Thomas is 1988 born person. He have done graduation in Computer Science and Engineering ( Anna University ).
+
+- [bookmarks](hyperlinks.html)
