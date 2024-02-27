@@ -2,8 +2,7 @@ Building From Source
 --------------------
 
 * Clone the repository `gh repo clone lalthomas/lalthomas.github.io`
-* Build the repository using `
-
+* Build the repository using `make`
 
 ### Source Files
 
@@ -27,14 +26,3 @@ data.json
 ```
 index.html
 ```
-
-
-
-
-
-
-
-
-
-1.md
-index.md

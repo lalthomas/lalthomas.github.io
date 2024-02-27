@@ -4,4 +4,4 @@
 
 Lal Thomas is 1988 born person. He have done graduation in Computer Science and Engineering ( Anna University ).
 
-- [bookmarks](hyperlinks.html)
+- [bookmarks](bookmarks.html)
