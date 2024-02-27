@@ -3,13 +3,15 @@ from tkinter import messagebox
 import json
 import os
 
+dataFile='bookmarkData.json'
+
 def load_categories():
-    if not os.path.exists('data.json') or os.path.getsize('data.json') == 0:
-        with open('data.json', 'w') as f:
+    if not os.path.exists(dataFile) or os.path.getsize(dataFile) == 0:
+        with open(dataFile, 'w') as f:
             json.dump([{"Category": "Category 1", "title": "Title 1", "url": "https://example.com"}], f, indent=4)
             return ["Category 1"]  # Return a default category if file is empty or missing
     else:
-        with open('data.json', 'r') as f:
+        with open(dataFile, 'r') as f:
             data = json.load(f)
             categories = sorted(set(entry['Category'] for entry in data))
         return categories
@@ -24,7 +26,7 @@ def add_entry():
         return
 
     # Check for duplicate entries
-    with open('data.json', 'r') as f:
+    with open(dataFile, 'r') as f:
         data = json.load(f)
         for entry in data:
             if entry['Category'] == category and entry['title'] == title and entry['url'] == url:
@@ -34,7 +36,7 @@ def add_entry():
     # Add new entry
     new_entry = {"Category": category, "title": title, "url": url}
     data.append(new_entry)
-    with open('data.json', 'w') as f:
+    with open(dataFile, 'w') as f:
         json.dump(data, f, indent=4)
     
     messagebox.showinfo("Success", "Entry added successfully.")
