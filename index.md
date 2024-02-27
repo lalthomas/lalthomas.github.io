@@ -1,4 +1,4 @@
-% Lal Thomas Documents
+% Internet Resources
 % Lal Thomas
 % 2024-02-27
 
